@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* ----------- HEADER ----------- */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    align-items: center;
+    background-color: #D1D1D1;
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-around;
+    width: 25vw;
+    margin-right: 10vh;
+}
+
+.nav-header a{
+    text-decoration: none;
+}
+
+#logo-sbank{
+    height: 8vh;
+    margin: 2vh;
+    margin-left: 10vh;
+}
+
+/* ----------- MAIN ----------- */
+
+.primeira-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-image:url(../assets/fundo.png);
+}
+
+.primeira-div_imagem_e_texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 40px;
+    color: #FFFFFF;
+    width: 65vh;
+}
+
+#primeira-div_imagem_e_texto-paragrafo{
+    font-weight: 400;
+    color: #C4C4C4;
+    font-size: 26px;
+    width: 55vh;
+}
+
+#primeira-div_imagem_e_texto-botao{
+    text-align: center;
+    padding: 2vh;
+    width: 17vw;
+    border-radius: 10px;
+    opacity: 50%;
+    background-color: #CD59B4;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.primeira-div_imagem_mulher_propaganda img{
+    height: 100vh;
+}
+
+.segunda-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30vh;
+    background-color: #1F1F1F;
+    padding: 5vh 10vh;
+}
+
+.segunda-div p{
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.segunda-div_grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.segunda-div_grid p{
+    text-align: center;
+    margin: 1vh;
+    padding: 1vh;
+    width: 20vw;
+    border-radius: 50px;
+    border: 1px solid #FFFFFF;
+    font-size: 20px;
+}
+
+.terceira-div{
+    display: flex;
+    flex-direction: column;
+    margin: 8vh;
+    color: #000000;
+}
+
+#terceira-div_primeiro-paragrafo{
+    font-size: 35px;
+}
+
+#terceira-div_segundo-paragrafo{
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 3vh;
+}
+
+.terceira-div_sessao{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4vh;
+    background-color: #DEDEDE;
+    border-radius: 10px;
+    padding: 3vh 2vh;
+}
+
+.terceira-div_sessao img{
+    height: 45vh;
+}
+
+.terceira-div_sessao div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45vh;
+}
+
+.terceira-div_sessao div p{
+    font-size: 35px;
+    font-weight: 800;
+    width: 35vw;
+}
+
+#terceira-div_sessao_link{
+    color: #CD59B4;
+    font-weight: 800;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.quarta-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10vh 14vh;
+    background-color: #F1F1F1;
+    font-size: 280px;
+    font-weight: 600;
+}
+
+.quarta-div_sessao{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+#quarta-div_sessao_paragrafo{
+    font-size: 40px;
+    font-weight: 600;
+    width: 38vw;
+}
+
+.quinta-div{
+    display: flex;
+    padding: 10vh;
+    background-image: url(../assets/fundo.png);
+}
+
+.quinta-div p{
+    font-size: 65px;
+    color: #FFFFFF;
+    width: 42vw;
+}
+
+.sexta-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 14vh 0vh;
+}
+
+#sexta-div_primeiro-paragrafo{
+    font-size: 45px;
+    font-weight: 600;
+    width: 30vw;
+}
+
+.sexta-div_sessao{
+    display: flex;
+    flex-direction: column;
+}
+
+#sexta-div_sessao_primeiro-paragrafo{
+    font-size: 30px;
+    padding: 2vh;
+}
+
+.sexta-div_sessao input{
+    width: 35vw;
+    border-radius: 50px;
+    padding: 1vh;
+}
+
+footer{
+    background-color: #1F1F1F;
+    padding: 20vh;
+}
+
+footer p{
+    font-size: 30px;
+    color: #FFFFFF;
+}
