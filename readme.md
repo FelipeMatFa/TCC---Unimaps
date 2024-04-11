@@ -52,19 +52,23 @@
 * No MySql Workbrench crie um banco de dados como o código abaixo
 
     ```
-    reate database db_tasks;
-    use db_tasks;
+    create database sbank;
+    use sbank;
     
-    drop database db_tasks;
+    drop database sbank;
     
-    create table tasks(
-        id int auto_increment primary key,
-        title varchar(255) not null,
-        description text,
-        create_at timestamp default                              current_timestamp
+    create table login(
+        id int unique auto_increment primary key,
+        nome varchar(255) not null,
+        email varchar(255) not null,
+        telefone varchar(14),
+        senha varchar(255) not null
     );
     
-    select * from tasks;
+    insert into login (nome, email, telefone, senha) 
+    Values ("Bigodinho", "Bigodinho@gmail.com", "(51) 991695144", "12345678");
+    
+    select * from login;
     ```
 
 ### Insomnia
