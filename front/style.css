@@ -6,64 +6,73 @@
 
 /* ----------- HEADER ----------- */
 
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+
     align-items: center;
     background-color: #D1D1D1;
 }
 
-.nav-header{
+.nav-header {
     display: flex;
     justify-content: space-around;
     width: 25vw;
     margin-right: 10vh;
 }
 
-.nav-header a{
+.nav-header a {
     text-decoration: none;
 }
 
-#logo-sbank{
+#logo-sbank {
     height: 8vh;
     margin: 2vh;
     margin-left: 10vh;
 }
 
+label {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+}
+
 /* ----------- MAIN ----------- */
 
-.primeira-div{
+.primeira-div {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-image:url(../assets/fundo.png);
+    background-image: url(../assets/fundo.png);
 }
 
-.primeira-div_imagem_e_texto{
+.primeira-div_imagem_e_texto {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
 }
 
-h1{
+h1 {
     font-weight: 800;
     font-size: 40px;
     color: #FFFFFF;
     width: 65vh;
 }
 
-#primeira-div_imagem_e_texto-paragrafo{
+#primeira-div_imagem_e_texto-paragrafo {
     font-weight: 400;
     color: #C4C4C4;
     font-size: 26px;
     width: 55vh;
 }
 
-#primeira-div_imagem_e_texto-botao{
+#primeira-div_imagem_e_texto-botao {
     text-align: center;
     padding: 2vh;
     width: 17vw;
@@ -75,11 +84,11 @@ h1{
     font-size: 23px;
 }
 
-.primeira-div_imagem_mulher_propaganda img{
+.primeira-div_imagem_mulher_propaganda img {
     height: 100vh;
 }
 
-.segunda-div{
+.segunda-div {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -88,18 +97,18 @@ h1{
     padding: 5vh 10vh;
 }
 
-.segunda-div p{
+.segunda-div p {
     color: #FFFFFF;
     font-size: 30px;
 }
 
-.segunda-div_grid{
+.segunda-div_grid {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.segunda-div_grid p{
+.segunda-div_grid p {
     text-align: center;
     margin: 1vh;
     padding: 1vh;
@@ -109,24 +118,24 @@ h1{
     font-size: 20px;
 }
 
-.terceira-div{
+.terceira-div {
     display: flex;
     flex-direction: column;
     margin: 8vh;
     color: #000000;
 }
 
-#terceira-div_primeiro-paragrafo{
+#terceira-div_primeiro-paragrafo {
     font-size: 35px;
 }
 
-#terceira-div_segundo-paragrafo{
+#terceira-div_segundo-paragrafo {
     font-weight: 600;
     font-size: 40px;
     margin-top: 3vh;
 }
 
-.terceira-div_sessao{
+.terceira-div_sessao {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -137,31 +146,31 @@ h1{
     padding: 3vh 2vh;
 }
 
-.terceira-div_sessao img{
+.terceira-div_sessao img {
     height: 45vh;
 }
 
-.terceira-div_sessao div{
+.terceira-div_sessao div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 45vh;
 }
 
-.terceira-div_sessao div p{
+.terceira-div_sessao div p {
     font-size: 35px;
     font-weight: 800;
     width: 35vw;
 }
 
-#terceira-div_sessao_link{
+#terceira-div_sessao_link {
     color: #CD59B4;
     font-weight: 800;
     font-size: 40px;
     text-decoration: none;
 }
 
-.quarta-div{
+.quarta-div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -171,7 +180,7 @@ h1{
     font-weight: 600;
 }
 
-.quarta-div_sessao{
+.quarta-div_sessao {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -179,69 +188,238 @@ h1{
     font-weight: 800;
 }
 
-#quarta-div_sessao_paragrafo{
+#quarta-div_sessao_paragrafo {
     font-size: 40px;
     font-weight: 600;
     width: 38vw;
 }
 
-.quinta-div{
+.quinta-div {
     display: flex;
     padding: 10vh;
     background-image: url(../assets/fundo.png);
 }
 
-.quinta-div p{
+.quinta-div p {
     font-size: 65px;
     color: #FFFFFF;
     width: 42vw;
 }
 
-.sexta-div{
+.sexta-div {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 14vh 0vh;
 }
 
-#sexta-div_primeiro-paragrafo{
+#sexta-div_primeiro-paragrafo {
     font-size: 45px;
     font-weight: 600;
     width: 30vw;
 }
 
-.sexta-div_sessao{
+.sexta-div_sessao {
     display: flex;
     flex-direction: column;
 }
 
-#sexta-div_sessao_primeiro-paragrafo{
+#sexta-div_sessao_primeiro-paragrafo {
     font-size: 30px;
     padding: 2vh;
 }
 
-.sexta-div_sessao input{
+.sexta-div_sessao input {
     width: 35vw;
     border-radius: 50px;
     padding: 1vh;
 }
 
-footer{
+footer {
     background-color: #1F1F1F;
     padding: 20vh;
 }
 
-footer p{
+footer p {
     font-size: 30px;
     color: #FFFFFF;
 }
 
-@media screen and (max-width: 414px) {
-    header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        
+
+/* ----------------------------RESPONSIVIDADE---------------------------- */
+
+@media screen and (max-width: 415px) {
+
+    /* iPhone XR */
+    /* @media only screen and (max-width: 414px) { iPhone XR */
+    header {
+        width: 100%;
+    }
+
+    .nav-header {
+        flex-direction: column;
         align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-header a {
+        display: none;
+    }
+
+    #logo-sbank {
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    label {
+        display: flex;
+        padding-right: 20%;
+    }
+
+    .primeira-div {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 300%;
+        width: auto;
+    }
+
+    .primeira-div_imagem_mulher_propaganda img {
+        display: none;
+    }
+
+    #primeira-div_imagem_e_texto-paragrafo {
+        font-size: 150%;
+        width: auto;
+    }
+
+    #primeira-div_imagem_e_texto-botao {
+        width: auto;
+        font-size: 16px;
+    }
+
+    .segunda-div {
+        height: auto;
+    }
+
+    .segunda-div p {
+        padding: 2%;
+        height: auto;
+    }
+
+    .segunda-div_grid p {
+        font-size: 100%;
+        width: auto;
+    }
+
+    .segunda-div_grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .segunda-div,
+    .terceira-div,
+    .quarta-div,
+    .quinta-div,
+    .sexta-div {
+        padding: 20px;
+    }
+
+    .terceira-div {
+        margin: auto;
+        width: 80%;
+    }
+
+    .terceira-div_sessao {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .terceira-div_sessao-texto {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .terceira-div_sessao-texto p {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .terceira-div_sessao div {
+        height: auto;
+    }
+
+    .terceira-div_sessao img {
+        height: 20%;
+        width: 80%;
+    }
+
+    .terceira-div_sessao div p {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .quarta-div {
+        flex-direction: column;
+
+    }
+
+    .quarta-div p {
+        margin: 5%;
+        font-size: 70%;
+
+    }
+
+    #quarta-div_sessao_paragrafo {
+        width: 70%;
+        font-size: 30%;
+    }
+
+    .quinta-div {
+        width: auto;
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
+
+    .quinta-div p {
+        width: 90%;
+        font-size: 350%;
+    }
+
+    .sexta-div {
+        width: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #sexta-div_primeiro-paragrafo {
+        width: 100%;
+    }
+
+    .sexta-div_sessao {
+        padding-top: 20%;
+        width: 100%;
+    }
+
+    .sexta-div_sessao input {
+        width: auto;
+    }
+
+    #sexta-div_sessao_primeiro-paragrafo {
+        width: auto;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer p {
+        padding-top: 20%;
+        padding-bottom: 20%;
+        font-size: 100%;
     }
 }
