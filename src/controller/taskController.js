@@ -3,12 +3,10 @@ const connection = require('../config/db');
 async function storeTask(request, response){
     const params = Array(
         request.body.nome,
-        request.body.email,
-        request.body.telefone,
-        request.body.senha
+        request.body.email
     );
 
-    const query = "INSERT INTO login(nome,email,telefone,senha) VALUES(?,?,?,?)";
+    const query = "INSERT INTO login(nome,email) VALUES(?,?)";
 
     connection.query(query, params, (err, results) => {
         if(results){

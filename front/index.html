@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sbank</title>
-
+    <link rel="icon" href="../assets/sbank-ico.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
         <img id="logo-sbank" src="../assets/sbank.png" alt="">
 
         <section class="nav-header">
-            <a href="">Abrir conta</a>
-            <a href="">Acesse sua conta</a>
+            <a href="#sexta-div_primeiro-paragrafo">Abrir conta</a>
+            <a href="#sexta-div_primeiro-paragrafo">Acesse sua conta</a>
         </section>
     </header>
 
@@ -61,7 +61,7 @@
                     <p>Crie já a sua conta corrente digital e usufrua 
                         de um cartão sem taxa e limite
                     </p>
-                    <a id="terceira-div_sessao_link" href="">Abrir conta  -></a>
+                    <a id="terceira-div_sessao_link" href="#sexta-div_primeiro-paragrafo">Abrir conta  -></a>
                 </div>
             </section>
         </div>
@@ -82,15 +82,19 @@
                 seja livre
                 com SBANK
             </p>
-            <!-- Background-image: Imagem-slogan -->
         </div>
         
         <div class="sexta-div">
             <p id="sexta-div_primeiro-paragrafo">Se inscreva para receber promoções sobre nossos produtos</p>
-            <section class="sexta-div_sessao">
-                <p id="sexta-div_sessao_primeiro-paragrafo">Digite seu E-Mail</p>
-                <input type="text">
-            </section>
+            <form>
+                <p>Nome:</p>
+                <input type="text" id="nome" name="nome">
+        
+                <p>Email:</p>
+                <input type="email" id="email" name="email">
+
+                <button id="handleSubmit">Enviar</button>
+            </form>
         </div>
     </main>
 
@@ -99,7 +103,15 @@
             12.345.678/0101-12 Rua Principal, 1104 - São Paulo, 
             SP - 98765-432
         </p>
+        <div class="setima-div">
+            <img src="../assets/insta.png" alt="" srcset="">
+            <a target="_blank" href="https://github.com/FelipeMatFa/SBANK">
+                <img src="../assets/github.png" alt="Direcionamento Github FelipeMatFa/SBANK">
+            </a>
+            <img src="" alt="" srcset="">
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
