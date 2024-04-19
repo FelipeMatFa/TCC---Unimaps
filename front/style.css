@@ -4,6 +4,9 @@
 
 }
 
+html{
+    position: absolute;
+}
 /* ----------- HEADER ----------- */
 
 header {
@@ -102,20 +105,35 @@ h1 {
     font-size: 30px;
 }
 
-.segunda-div_grid {
+.segunda-div_servicos {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.segunda-div_grid p {
+#segunda-div_servicos_paragrafo{
     text-align: center;
-    margin: 1vh;
-    padding: 1vh;
-    width: 20vw;
+    margin: 1.5vh;
+    padding: 2vh;
+    width: 31vw;
     border-radius: 50px;
     border: 1px solid #FFFFFF;
     font-size: 20px;
+}
+
+#segunda-div_servicos_paragrafo:nth-child(2) {
+    width: 20vw;
+}
+
+#segunda-div_servicos_paragrafo:nth-child(3) {
+    width: 24vw;
+}
+
+#segunda-div_servicos_paragrafo:nth-child(4) {
+    width: 28vw;
+}
+
+#segunda-div_servicos_paragrafo:nth-child(5) {
+    width: 21vw;
 }
 
 .terceira-div {
@@ -214,9 +232,9 @@ h1 {
 }
 
 #sexta-div_primeiro-paragrafo {
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 600;
-    width: 30vw;
+    width: 40vw;
 }
 
 form{
@@ -224,6 +242,7 @@ form{
     flex-direction: column;
     align-items: start;
     justify-content: space-around;
+    height: 35vh;
 }
 
 form input{
@@ -337,14 +356,33 @@ footer p {
         height: auto;
     }
 
-    .segunda-div_grid p {
-        font-size: 100%;
-        width: auto;
-    }
-
-    .segunda-div_grid {
+    .segunda-div_servicos {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    #segunda-div_servicos_paragrafo{
+        margin: 1vh;
+        padding: 1vh;
+        width: 39vw;
+        border-radius: 30px;
+        font-size: 14px;
+    }
+    
+    #segunda-div_servicos_paragrafo:nth-child(2) {
+        width: 27vw;
+    }
+    
+    #segunda-div_servicos_paragrafo:nth-child(3) {
+        width: 29vw;
+    }
+    
+    #segunda-div_servicos_paragrafo:nth-child(4) {
+        width: 28vw;
+    }
+    
+    #segunda-div_servicos_paragrafo:nth-child(5) {
+        width: 43vw;
     }
 
     .segunda-div,
@@ -378,12 +416,13 @@ footer p {
     }
 
     .terceira-div_sessao div {
-        height: auto;
+        height: 15vh;
     }
 
     .terceira-div_sessao img {
         height: 20%;
-        width: 80%;
+        width: 100%;
+        margin: 1vh;
     }
 
     .terceira-div_sessao div p {
@@ -422,11 +461,31 @@ footer p {
         width: auto;
         align-items: center;
         flex-direction: column;
+        justify-content: space-between;
         height: 50vh;
     }
 
     #sexta-div_primeiro-paragrafo {
         width: 100%;
+        font-size: 33px;
+    }
+
+    form{
+        height: 30vh;
+    }
+    
+    form input{
+        width: 83vw;
+        height: 5.5vw;
+    }
+    
+    #handleSubmit{
+        width: 40vw;
+        padding: 2vh;
+    }
+    
+    #email, #nome{
+        font-size: 20px;
     }
 
     .sexta-div_sessao {
@@ -450,5 +509,9 @@ footer p {
         padding-top: 20%;
         padding-bottom: 20%;
         font-size: 100%;
+    }
+
+    #redes-sociais{
+        height: 6vh;
     }
 }
