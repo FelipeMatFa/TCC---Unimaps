@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #2581FF, #E726FF);
+}
+
+.primeira-div_cadastro{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.primeira-div_cadastro p{
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input{
+    font-size: 20px;
+    padding: 1.5vh;
+    border-radius: 5px;
+    width: 20vw;
+}
+
+button{
+    padding: 1.5vh;
+    border-radius: 5px;
+    background-color: #4290FB;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}

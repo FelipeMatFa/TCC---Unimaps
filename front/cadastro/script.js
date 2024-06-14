@@ -1,6 +1,7 @@
 let button = document.getElementById("handleSubmit");
 
-button.onclick = async function(){
+button.onclick = async function(e){
+    e.preventDefault();
     let nome     = document.getElementById("nome").value;
     let senha     = document.getElementById("senha").value;
     let email    = document.getElementById("email").value;
@@ -16,8 +17,9 @@ button.onclick = async function(){
     let content = await response.json();
 
     if(content.success){
-        alert("Sucesso")
+        alert("Usuário cadastrado com sucesso!")
+        window.location.href = "../Home/index.html"
     } else {
-        alert("Não");
+        alert("Não foi possivel fazer o cadastro, tente novamente");
     }
 }

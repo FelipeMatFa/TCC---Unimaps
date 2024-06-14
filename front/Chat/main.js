@@ -21,7 +21,7 @@ function criarResposta(){
     }
     else if(mensagem.value.includes("07/09/1822") && p1 === true || mensagem.value.includes("7 de setembro") && p1 === true || mensagem.value.includes("7 de setembro de 1822") && p1 === true){
         card1 = `
-        <p>Parabéns, sabe o minimo</p>
+        <p>Parabéns, sabe o mínimo</p>
         <p>Questões certas 1/1</p>
         `
         return card1
