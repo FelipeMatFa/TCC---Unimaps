@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "aside header" 
+                         "aside main";
+    grid-template-columns: 1% 99%;
+    grid-template-rows: 0.5fr 2fr;
+}
+
+header{
+    grid-area: header;
+    background-color: #514EF7;
+    padding: 4vh;
+}
+
+header h1{
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: aside;
+    background-color: #413DFF;
+    width: 3vh;
+    transition: width 0.3s ease;
+    position: fixed;
+    top: 0;
+    height: 100%;
+}
+
+.div-elementos-navegacao{
+    display: flex;
+    flex-direction: column;
+    padding: 4vh;
+    gap: 25px;
+}
+
+#Home, #Mapa, #Grupos, #Dica, #Chatbot, #notificacoes{
+    display: none;
+    height: 5.5vh;
+    width: 3vw;
+}
+
+#Dica{
+    width: 2.5vw;
+}
+
+#notificacoes{
+    width: 2vw;
+    padding: 2vw;
+}
+
+aside:hover{
+    width: 6vw;
+}
+
+aside:hover #Home, aside:hover #Mapa, aside:hover #Grupos, aside:hover #Dica, aside:hover #Chatbot, aside:hover #notificacoes{
+    display: flex;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "div form";
+    grid-template-columns: 90% 10%;
+    grid-template-columns: 0.5fr 2fr;
+    padding-left: 20vh;
+    padding-right: 20vh;
+    padding-top: 6vh;
+}

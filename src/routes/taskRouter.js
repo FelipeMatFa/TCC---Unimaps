@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const router = Router();
 
-const { storeTask } = require('../controller/taskController');
+const { cadastrarUser } = require('../controller/taskController');
 
-router.post('/store/task', storeTask);
+router.post('/usuario/cadastro', cadastrarUser);
 
 module.exports = router;

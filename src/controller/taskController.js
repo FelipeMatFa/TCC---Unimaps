@@ -1,12 +1,13 @@
 const connection = require('../config/db');
 
-async function storeTask(request, response){
+async function cadastrarUser(request, response){
     const params = Array(
         request.body.nome,
+        request.body.senha,
         request.body.email
     );
 
-    const query = "INSERT INTO login(nome,email) VALUES(?,?)";
+    const query = "INSERT INTO usuario(nome,senha,email) VALUES(?,?,?)";
 
     connection.query(query, params, (err, results) => {
         if(results){
@@ -31,5 +32,5 @@ async function storeTask(request, response){
 }
 
 module.exports = {
-    storeTask
+    cadastrarUser
 }
