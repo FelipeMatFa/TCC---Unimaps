@@ -8,7 +8,7 @@ button.onclick = async function(e){
 
     let data     = {nome,senha,email}
 
-    const response = await fetch('http://localhost:3000/api/usuario/cadastro', {
+    const response = await fetch('http://localhost:3000/api/cadastro', {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
         body: JSON.stringify(data),
@@ -18,7 +18,7 @@ button.onclick = async function(e){
 
     if(content.success){
         alert("Usuário cadastrado com sucesso!")
-        window.location.href = "../Home/index.html"
+        window.location.href = "../Login/index.html"
     } else {
         alert("Não foi possivel fazer o cadastro, tente novamente");
     }

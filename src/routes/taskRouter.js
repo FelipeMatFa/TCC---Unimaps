@@ -3,6 +3,6 @@ const router = Router();
 
 const { cadastrarUser } = require('../controller/taskController');
 
-router.post('/usuario/cadastro', cadastrarUser);
+router.post('/cadastro', cadastrarUser);
 
 module.exports = router;
