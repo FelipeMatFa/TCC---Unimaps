@@ -76,3 +76,13 @@ main {
     padding-right: 20vh;
     padding-top: 6vh;
 }
+
+.tarefas{
+    display: flex;
+    flex-direction: column;
+}
+
+.tarefas section{
+    display: flex;
+    flex-direction: column;
+}

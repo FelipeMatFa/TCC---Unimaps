@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "League Spartan", sans-serif;
+}
+
+/* --------- HEADER --------- */
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2.5vh 10vh;
+}
+
+.header-primeira-div, .header-segunda-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo{
+    height: 8vh;
+}
+
+h1{
+    font-size: 24px;
+}
+
+#button-cadastro, #button-login{
+    padding: 1.5vh 2vh;
+    font-size: 14px;
+    border: 1.5px solid black;
+    background-color: white;
+    font-weight: 600;
+}
+
+#button-cadastro{
+    background-color: black;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/* --------- MAIN --------- */
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.primeira-sessao_div{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20vh 15vh;
+    background-image: url("../../assets/fundo-universidade.png");
+    height: 60vh;
+    gap: 20px;
+}
+
+#div_primeiro_paragrafo-boasVindas, #div_segundo_paragrafo-descricao{
+    font-size: 50px;
+    font-weight: 600;
+    width: 50vw;
+}
+
+#div_segundo_paragrafo-descricao{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.main-segunda-sessao{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#segunda-sessao_titulo{
+    font-size: 40px;
+    padding: 15vh 10vh;
+}
+
+.segunda-sessao_carrossel{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    overflow-x: scroll;
+    padding: 1vh 4vh;
+}
+
+.main-segunda-sessao_card{
+    display: flex;
+    flex-direction: column;
+    background-color: #C3C3C3;
+    border-radius: 10px;
+    width: 27vw;
+}
+
+#card-img{
+    height: 50vh;
+    width: 27vw;
+}
+
+.main-segunda-sessao_card section{
+    padding: 2vh;
+}
+
+h3, p{
+    font-size: 20px;
+    padding: 1vh 2vh;
+}

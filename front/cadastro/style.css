@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "League Spartan", sans-serif;
 }
 
 main{
@@ -9,6 +10,20 @@ main{
     align-items: center;
     height: 100vh;
     background-image: linear-gradient(to bottom, #2581FF, #E726FF);
+    background-size: 100% 200%; /* Tamanho do gradiente (largura 100%, altura 200%) */
+    animation: waveAnimation 10s linear infinite; /* Define a animação */
+}
+
+@keyframes waveAnimation {
+    0% {
+        background-position: 0% 0%; /* Começa do topo */
+    }
+    50% {
+        background-position: 100% 100%; /* Chega ao ponto mais baixo */
+    }
+    100% {
+        background-position: 0% 0%; /* Volta ao topo */
+    }
 }
 
 .primeira-div_cadastro{
@@ -34,8 +49,9 @@ form{
 input{
     font-size: 20px;
     padding: 1.5vh;
-    border-radius: 5px;
-    width: 20vw;
+    border-radius: 10px;
+    border: none;
+    width: 25vw;
 }
 
 button{
@@ -44,5 +60,5 @@ button{
     background-color: #4290FB;
     color: white;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
