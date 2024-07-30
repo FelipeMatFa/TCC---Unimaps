@@ -62,3 +62,12 @@ main {
     width: 100vw;
     z-index: 1;
 }
+
+#botao-adicionar-local{
+    position: absolute;
+    top: 500px;
+    right: 470px;
+    z-index: 3;
+    font-size: 20px;
+    padding: 2vh 2vw;
+}
