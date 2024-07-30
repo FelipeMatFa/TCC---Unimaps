@@ -113,3 +113,32 @@ h3, p{
     font-size: 20px;
     padding: 1vh 2vh;
 }
+
+.main-terceira-sessao{
+    display: flex;
+    background-color: #4B1A9A;
+    margin: 10vh 0vh 10vh 0vh;
+}
+
+.main-terceira-sessao img{
+    padding: 10vh;
+}
+
+.main-terceira-sessao_informacoes{
+    color: azure;
+    padding: 18vh 1vh;
+}
+
+#informacoes_titulo{
+    font-size: 34px;
+    font-weight: 600;
+}
+
+#informacoes_paragrafo{
+    font-size: 18px;
+}
+
+#informacoes_saiba-mais{
+    color: azure;
+    
+}

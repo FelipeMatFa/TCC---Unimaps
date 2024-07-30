@@ -8,18 +8,13 @@ body{
     grid-template-areas: "aside header" 
                          "aside main";
     grid-template-columns: 1% 99%;
-    grid-template-rows: 0.5fr 2fr;
+    grid-template-rows: 0.5fr 3fr;
 }
 
 header{
     grid-area: header;
     background-color: #514EF7;
     padding: 4vh;
-}
-
-header h1{
-    font-size: 25px;
-    color: #FFFFFF;
 }
 
 aside {
@@ -66,13 +61,97 @@ aside:hover #Home, aside:hover #Mapa, aside:hover #Grupos, aside:hover #Dica, as
     display: flex;
 }
 
+
+/* ------ MAIN ------ */
+
 main {
     grid-area: main;
     display: grid;
     grid-template-areas: "div form";
     grid-template-columns: 90% 10%;
     grid-template-columns: 0.5fr 2fr;
-    padding-left: 20vh;
-    padding-right: 20vh;
-    padding-top: 6vh;
+}
+
+.div-barra-navegacao-grupos{
+    background-color: #7774FF;
+    height: 100%;
+    width: 30vw;
+}
+
+.barra-navegacao-grupos_grupo{
+    display: flex;
+    flex-direction: row;
+    padding: 3vh 3vw;
+    align-items: center;
+    gap: 20px;
+}
+
+.barra-navegacao-grupos_grupo img{
+    height: 10vh;
+}
+
+#grupo_nome-do-grupo{
+    color: azure;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.div-conteudo-grupo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 14vh 8vw;
+    gap: 10vh;
+}
+
+.div-conteudo-grupo_nome-e-grupos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nome-e-grupos_imagem{
+    height: 34vh;
+}
+
+#nome-e-grupos_nome-grupo{
+    font-size: 34px;
+    font-weight: 600;
+}
+
+#nome-e-grupos_membros-grupo{
+    font-size: 16px;
+}
+
+.div-conteudo-grupo_descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#descricao_titulo{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#descricao_texto-descricao{
+    font-size: 20px;
+}
+
+.div-conteudo-grupo_conversas{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.conversas_outros-usuarios{
+    background-color: #D9D9D9;
+    padding: 2vh 4vh;
+    align-self: flex-start;
+}
+
+.conversas_usuario{
+    background-color: #D9D9D9;
+    padding: 2vh 4vh;
+    align-self: flex-end;
 }
