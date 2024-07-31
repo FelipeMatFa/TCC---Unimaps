@@ -86,3 +86,8 @@ main {
     display: flex;
     flex-direction: column;
 }
+
+.section-tarefa{
+    display: flex;
+    flex-direction: column;
+}
