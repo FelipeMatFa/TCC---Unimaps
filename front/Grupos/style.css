@@ -73,6 +73,9 @@ main {
 }
 
 .div-barra-navegacao-grupos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #7774FF;
     height: 100%;
     width: 30vw;
@@ -84,6 +87,10 @@ main {
     padding: 3vh 3vw;
     align-items: center;
     gap: 20px;
+}
+
+#barra-navegacao-grupos_button{
+    margin: 3vh 3vw;
 }
 
 .barra-navegacao-grupos_grupo img{
