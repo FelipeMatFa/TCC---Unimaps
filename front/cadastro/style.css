@@ -32,11 +32,15 @@ main{
     gap: 40px;
     align-items: center;
     flex-direction: column;
+    background-color: white;
+    padding: 16vh 26vh;
+    border-radius: 10px;
+
 }
 
 .primeira-div_cadastro p{
     font-size: 40px;
-    color: white;
+    color: black;
     font-weight: 600;
 }
 
@@ -50,8 +54,7 @@ input{
     font-size: 20px;
     padding: 1.5vh;
     border-radius: 10px;
-    border: none;
-    width: 25vw;
+    width: 30vw;
 }
 
 button{

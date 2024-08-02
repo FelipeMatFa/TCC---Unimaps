@@ -1,0 +1,24 @@
+let button = document.getElementById("handleSubmit");
+
+button.onclick = async function(e){
+    e.preventDefault();
+    let titulo     = document.getElementById("titulo").value;
+    let descricao     = document.getElementById("descricao").value;
+
+    let data     = {titulo,descricao}
+
+    const response = await fetch('http://localhost:3000/api/marcarLugares', {
+        method: "POST",
+        headers: {"Content-type": "application/json;charset=UTF-8"},
+        body: JSON.stringify(data),
+    });
+
+    let content = await response.json();
+
+    if(content.success){
+        alert("Usuário cadastrado com sucesso!")
+        window.location.href = "../Login/index.html"
+    } else {
+        alert("Não foi possivel fazer o cadastro, tente novamente");
+    }
+}

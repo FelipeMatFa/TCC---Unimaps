@@ -71,3 +71,16 @@ main {
     font-size: 20px;
     padding: 2vh 2vw;
 }
+
+#formularioLugares{
+    display: none;
+    flex-direction: column;
+    z-index: 4;
+    position: absolute;
+    
+    top: 2vh;
+    right: 470px;
+    z-index: 3;
+    font-size: 20px;
+    padding: 2vh 2vw;
+}

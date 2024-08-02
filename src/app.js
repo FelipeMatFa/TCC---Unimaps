@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv').config();
 const taskRouter = require('./routes/taskRouter');
 const loginRouter = require("./routes/loginRouter");
+const marcarLugar = require("./routes/marcadoresRouter");
 
 const app = express();
 app.set('port', process.env.PORT || 3005);
@@ -12,7 +13,8 @@ app.use(cors());
 
 app.use('/api', [
     taskRouter,
-    loginRouter
+    loginRouter,
+    marcarLugar
 ]);
 
 module.exports = app;

@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "League Spartan", sans-serif;
 }
 
 main{
@@ -17,11 +18,14 @@ main{
     gap: 40px;
     align-items: center;
     flex-direction: column;
+    background-color: white;
+    padding: 18vh 28vh;
+    border-radius: 10px;
 }
 
 .primeira-div_cadastro p{
     font-size: 40px;
-    color: white;
+    color: black;
     font-weight: 600;
 }
 
@@ -35,7 +39,7 @@ input{
     font-size: 20px;
     padding: 1.5vh;
     border-radius: 5px;
-    width: 20vw;
+    width: 28vw;
 }
 
 button{
