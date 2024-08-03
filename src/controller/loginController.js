@@ -2,7 +2,7 @@ const connection = require("../config/db");
 
 async function login(request, response) {    
   const email = request.body.email;
-  const query = "SELECT email, senha, nome FROM usuario WHERE email = ?";
+  const query = "SELECT * FROM usuario WHERE email = ?";
 
   connection.query(query, email, (err, results) => {    
     if(results) {

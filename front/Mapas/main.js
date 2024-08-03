@@ -11,12 +11,14 @@ button.onclick = function(){
     }
 }
 
-button.onsubmit = async function(e){
+formulario.onsubmit = async function(e){
     e.preventDefault();
     let titulo     = document.getElementById("titulo").value;
     let descricao  = document.getElementById("descricao").value;
+    let suaLatitude = localStorage.getItem('latitude');
+    let suaLongitude = localStorage.getItem('longitude');
 
-    let data     = {titulo,descricao}
+    let data     = {titulo,descricao,suaLatitude,suaLongitude}
     const response = await fetch('http://localhost:3000/api/marcarLugar', {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
@@ -26,16 +28,35 @@ button.onsubmit = async function(e){
     let content = await response.json();
 }
 
-// button.onclick = () => {
-//     const marker = L.marker([50, -50]);
-//     marker.addTo(map);
-//     marker.bindPopup('Restaurante Universitário').openPopup();
-// }
+window.onload = async function(e){
+    e.preventDefault();
+    const response = await fetch('http://localhost:3000/api/listarLugares', {
+        method: "GET",
+        headers: {"Content-type": "application/json;charset=UTF-8"},
+    });
+
+    let content = await response.json();
+    console.log(content)
+    criar(content)
+}
+
+// LISTAR OS MARCADORES
+function criar(marcadores){
+    console.log(marcadores.data)
+    marcadores.data.forEach(marcador => {
+        console.log(marcador)
+        const marker = L.marker([parseFloat(marcador.latitude), parseFloat(marcador.longitude)]);
+        marker.addTo(map);
+        
+        marker.bindPopup(marcador.titulo);
+    });
+}
 
 const layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19
 });
 
+// PEGAR E ATUALIZAR A LOCALIZAÇÃO DO USUÁRIO
 function atualizarLocalizacao(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
@@ -46,6 +67,8 @@ function atualizarLocalizacao(position) {
         .openPopup();
 
     map.setView([lat, lon], 13);
+    localStorage.setItem('latitude', lat);
+    localStorage.setItem('longitude', lon);
 }
 
 if (navigator.geolocation) {

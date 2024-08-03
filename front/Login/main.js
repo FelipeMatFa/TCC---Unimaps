@@ -19,6 +19,7 @@ button.onclick = async function(e){
     if (result.success) {
       console.log(result.data)
       localStorage.setItem('userName', result.data[0].nome)
+      localStorage.setItem('id', result.data[0].id)
       window.location.href = "../Home/index.html";
     } else {
       alert(result.message);

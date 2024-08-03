@@ -4,10 +4,11 @@ async function marcarLugar(request, response){
     const params = Array(
         request.body.titulo,
         request.body.descricao,
-        request.body.localizacao
+        request.body.suaLatitude,
+        request.body.suaLongitude
     );
 
-    const query = "INSERT INTO marcadores(titulo,descricao,localizacao) VALUES(?,?,?)";
+    const query = "INSERT INTO marcadores(titulo,descricao,latitude,longitude) VALUES(?,?,?,?)";
 
     connection.query(query, params, (err, results) => {
         if(results){
@@ -31,37 +32,35 @@ async function marcarLugar(request, response){
     });
 }
 
-// async function listarLugares(request, response) {    
-//     const email = request.body.email;
-//     const query = "SELECT email, senha, nome FROM usuario WHERE email = ?";
-  
-//     connection.query(query, email, (err, results) => {    
-//       if(results) {
-//         const password = request.body.senha;
-//         const passwordQuery = results[0].senha;
-  
-//         if (password === passwordQuery) {
-//           response
-//             .status(200)
-//             .json({
-//               success: true,
-//               message: "Sucesso!",
-//               data: results
-//             })
-//         } else {
-//           response
-//             .status(400)
-//             .json({
-//               success: false,
-//               message: "Sem Sucesso!",
-//               data: err
-//             })
-//         }
-//       }
-//     })
-// }  
+async function listarLugares(request, response){
+    // const params = Array(
+    //     request.body.id
+    // )
+    const query = "SELECT * FROM marcadores";
+
+    connection.query(query, /* params, */ (err, results) => {
+        if(results){
+            response
+                .status(201)
+                .json({
+                    success: true,
+                    message: "Sucesso!",
+                    data: results
+                });
+        } else {
+            response
+                .status(400)
+                .json({
+                    success: false,
+                    message: "Ops! Não deu...",
+                    query: err.sql,
+                    sqlMessage: err.sqlMessage
+                });
+        }
+    });
+}
 
 module.exports = {
-    marcarLugar
-    // listarLugares
+    marcarLugar,
+    listarLugares
 }
