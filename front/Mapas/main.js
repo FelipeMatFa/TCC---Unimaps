@@ -17,8 +17,9 @@ formulario.onsubmit = async function(e){
     let descricao  = document.getElementById("descricao").value;
     let suaLatitude = localStorage.getItem('latitude');
     let suaLongitude = localStorage.getItem('longitude');
+    let id = sessionStorage.getItem('id');
 
-    let data     = {titulo,descricao,suaLatitude,suaLongitude}
+    let data     = {titulo,descricao,suaLatitude,suaLongitude,id}
     const response = await fetch('http://localhost:3000/api/marcarLugar', {
         method: "POST",
         headers: {"Content-type": "application/json;charset=UTF-8"},
@@ -30,15 +31,24 @@ formulario.onsubmit = async function(e){
 // window.location.reload
 window.onload = async function(e){
     e.preventDefault();
-    const response = await fetch('http://localhost:3000/api/listarLugares', {
-        method: "GET",
-        headers: {"Content-type": "application/json;charset=UTF-8"},
-    });
+    let id = sessionStorage.getItem('id');
+    console.log(id); // Adicione esta linha para verificar o valor do id
 
-    let content = await response.json();
-    console.log(content)
-    criar(content)
+    if (id) {
+        const response = await fetch(`http://localhost:3000/api/listarLugares?id=${id}`, {
+            method: "GET",
+            headers: {"Content-type": "application/json;charset=UTF-8"},
+        });
+
+        let content = await response.json();
+        console.log(content);
+        criar(content);
+    } else {
+        console.error("ID não encontrado no localStorage");
+    }
 }
+
+
 
 // LISTAR OS MARCADORES
 function criar(marcadores){
@@ -67,8 +77,8 @@ function atualizarLocalizacao(position) {
         .openPopup();
 
     map.setView([lat, lon], 13);
-    localStorage.setItem('latitude', lat);
-    localStorage.setItem('longitude', lon);
+    sessionStorage.setItem('latitude', lat);
+    sessionStorage.setItem('longitude', lon);
 }
 
 if (navigator.geolocation) {
