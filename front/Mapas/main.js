@@ -27,7 +27,7 @@ formulario.onsubmit = async function(e){
 
     let content = await response.json();
 }
-
+// window.location.reload
 window.onload = async function(e){
     e.preventDefault();
     const response = await fetch('http://localhost:3000/api/listarLugares', {
@@ -53,7 +53,7 @@ function criar(marcadores){
 }
 
 const layer = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19
+    maxZoom: 19,
 });
 
 // PEGAR E ATUALIZAR A LOCALIZAÇÃO DO USUÁRIO
