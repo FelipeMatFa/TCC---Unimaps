@@ -10,8 +10,8 @@ main{
     align-items: center;
     height: 100vh;
     background-image: linear-gradient(to bottom, #2581FF, #E726FF);
-    background-size: 100% 200%; /* Tamanho do gradiente (largura 100%, altura 200%) */
-    animation: waveAnimation 10s linear infinite; /* Define a animação */
+    background-size: 100% 200%; 
+    animation: waveAnimation 10s linear infinite; 
 }
 
 @keyframes waveAnimation {
@@ -35,7 +35,6 @@ main{
     background-color: white;
     padding: 16vh 26vh;
     border-radius: 10px;
-
 }
 
 .primeira-div_cadastro p{

@@ -2,6 +2,23 @@ const chatBot = document.querySelector(".div-elementos-conversa");
 const button = document.querySelector("#enviar");
 const mensagem = document.getElementById("mensagem");
 
+button.onclick = async function(e){
+    e.preventDefault();
+    let prompt = document.getElementById("mensagem").value;
+
+    let data = {prompt}
+    const response = await fetch(`http://localhost:3000/api/chat`, {
+        method: "POST",
+        headers: {"Content-type": "application/json;charset=UTF-8"},
+        body: JSON.stringify(data),
+    });
+    
+    console.log("post feito!")
+    let content = await response.json();
+    console.log(content);
+    criarResposta(content);
+}
+
 function criarChat(msg) {
     card = `
         <p id="mensagem_user">${msg}</p>
@@ -11,28 +28,11 @@ function criarChat(msg) {
 
 p1 = false
 
-function criarResposta(){
-    if (mensagem.value.includes("independencia do brasil") || mensagem.value.includes("independência do brasil")){
-        card1 = `
-        <p>Quando foi proclamado a independência do brasil?</p>
-        `
-        p1 = true
-        return card1
-    }
-    else if(mensagem.value.includes("07/09/1822") && p1 === true || mensagem.value.includes("7 de setembro") && p1 === true || mensagem.value.includes("7 de setembro de 1822") && p1 === true){
-        card1 = `
-        <p>Parabéns, sabe o mínimo</p>
-        <p>Questões certas 1/1</p>
-        `
-        return card1
-    }
-    else{
-        card1 = `
-        <p>Por favor, escolha uma matéria para estudar</p>
-        `
-        return card1
-    }
-    
+function criarResposta(retorno){
+    card1 = `
+        <p>${retorno}<p>
+    `;
+    return card1;
 }
 
 function texto(){

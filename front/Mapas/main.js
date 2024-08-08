@@ -15,8 +15,8 @@ formulario.onsubmit = async function(e){
     e.preventDefault();
     let titulo     = document.getElementById("titulo").value;
     let descricao  = document.getElementById("descricao").value;
-    let suaLatitude = localStorage.getItem('latitude');
-    let suaLongitude = localStorage.getItem('longitude');
+    let suaLatitude = sessionStorage.getItem('latitude');
+    let suaLongitude = sessionStorage.getItem('longitude');
     let id = sessionStorage.getItem('id');
 
     let data     = {titulo,descricao,suaLatitude,suaLongitude,id}
