@@ -8,6 +8,8 @@ const connection = mysql.createConnection({
     database: process.env.DB_DATABASE
 });
 
+// console.log("Chave Gemini:", process.env.CHAVE_GEMINI);
+
 connection.connect( (err) => {
     if (err){
         throw err;
