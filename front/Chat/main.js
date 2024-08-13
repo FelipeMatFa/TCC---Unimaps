@@ -41,5 +41,5 @@ function texto(respostaHTML) {
     chatBot.innerHTML += criarChat(mensagem.value); // Adiciona a mensagem do usuário
     setTimeout(function() {
         chatBot.innerHTML += respostaHTML; // Adiciona a resposta após um atraso
-    }, 2000); // Espera 2 segundos para adicionar a resposta
+    }, 1000); // Espera 2 segundos para adicionar a resposta
 }

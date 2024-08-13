@@ -1,6 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
-const taskRouter = require('./routes/taskRouter');
+const cadastroRouter = require('./routes/cadastroRouter');
 const loginRouter = require("./routes/loginRouter");
 const marcarLugar = require("./routes/marcadoresRouter");
 const chatRouter = require('./routes/chatRouter');
@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/api', [
-    taskRouter,
+    cadastroRouter,
     loginRouter,
     marcarLugar,
     chatRouter

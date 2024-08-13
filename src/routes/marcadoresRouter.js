@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const { marcarLugar, listarLugares } = require('../controller/marcadoresController.js');
+const { marcarLugar, listarLugaresMapa } = require('../controller/marcadoresController.js');
 
 router.post('/marcarLugar', marcarLugar);
-router.get('/listarLugares', listarLugares);
+router.get('/listarLugaresMapa', listarLugaresMapa);
 
 module.exports = router;

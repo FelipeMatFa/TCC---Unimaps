@@ -33,7 +33,7 @@ async function marcarLugar(request, response){
     });
 }
 
-async function listarLugares(request, response){
+async function listarLugaresMapa(request, response){
     const id = request.query.id; // Obtendo o parâmetro id da query string
     const params = [id];
     
@@ -63,5 +63,5 @@ async function listarLugares(request, response){
 
 module.exports = {
     marcarLugar,
-    listarLugares
+    listarLugaresMapa
 }

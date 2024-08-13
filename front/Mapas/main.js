@@ -28,37 +28,62 @@ formulario.onsubmit = async function(e){
 
     let content = await response.json();
 }
-// window.location.reload
-window.onload = async function(e){
-    e.preventDefault();
+
+document.addEventListener("DOMContentLoaded", async () => {
     let id = sessionStorage.getItem('id');
-    console.log(id); // Adicione esta linha para verificar o valor do id
+    // console.log(id);
 
     if (id) {
-        const response = await fetch(`http://localhost:3000/api/listarLugares?id=${id}`, {
+        const response = await fetch(`http://localhost:3000/api/listarLugaresMapa?id=${id}`, {
             method: "GET",
             headers: {"Content-type": "application/json;charset=UTF-8"},
         });
 
         let content = await response.json();
-        console.log(content);
+        // console.log(content);
         criar(content);
+        criarLista(content);
     } else {
         console.error("ID não encontrado no localStorage");
     }
-}
-
-
+});
 
 // LISTAR OS MARCADORES
 function criar(marcadores){
-    console.log(marcadores.data)
+    // console.log(marcadores.data)
     marcadores.data.forEach(marcador => {
-        console.log(marcador)
+        // console.log(marcador)
         const marker = L.marker([parseFloat(marcador.latitude), parseFloat(marcador.longitude)]);
         marker.addTo(map);
         
         marker.bindPopup(marcador.titulo);
+    });
+}
+
+function criarLista(informacoes){
+    const listaLugares = document.querySelector(".main-segunda-div");
+    informacoes.data.forEach(informacao => {
+
+        const card = document.createElement('section');
+        card.className = "informacoes-card"
+
+        const img = document.createElement('img');
+        img.src = '../../assets/fundo-universidade.png'
+        img.className = "informacoes-card_imagem"
+
+        const titulo = document.createElement('h2')
+        titulo.textContent = informacao.titulo;
+        titulo.className = "informacoes-card_titulo"
+
+        const descricao = document.createElement('p')
+        descricao.textContent = informacao.descricao;
+        descricao.className = "informacoes-card_descricao"
+
+        card.appendChild(img)
+        card.appendChild(titulo)
+        card.appendChild(descricao)
+        listaLugares.appendChild(card)
+
     });
 }
 

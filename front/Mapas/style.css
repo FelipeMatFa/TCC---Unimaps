@@ -59,7 +59,7 @@ main {
 
 #map{
     height: 100vh;
-    width: 100vw;
+    width: 98.5vw;
     z-index: 1;
 }
 
@@ -83,4 +83,42 @@ main {
     z-index: 3;
     font-size: 20px;
     padding: 2vh 2vw;
+}
+
+/* --- MAIN --- */
+
+.main-segunda-div{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    overflow: auto;
+    top: 170px;
+    right: 10px;
+    z-index: 4;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 25vw;
+    max-height: 70vh;
+    padding: 5vh;
+    box-sizing: border-box; 
+}
+
+.informacoes-card{
+    height: 17.5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes-card_imagem{
+    height: 6vh;
+    width: 3vw;
+    border-radius: 60px;
+}
+
+.informacoes-card_titulo{
+    font-size: 20px;
+}
+
+.informacoes-card_descricao{
+    font-size: 14px;
 }
