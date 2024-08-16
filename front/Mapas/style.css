@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'League Spartan', sans-serif;
 }
 
 header h1{
@@ -20,6 +21,7 @@ aside {
     position: fixed;
     top: 0;
     height: 100%;
+    z-index: 2;
 }
 
 .div-elementos-navegacao{
@@ -67,7 +69,7 @@ main {
     position: absolute;
     top: 500px;
     right: 470px;
-    z-index: 3;
+    z-index: 2;
     font-size: 20px;
     padding: 2vh 2vw;
 }
@@ -75,12 +77,10 @@ main {
 #formularioLugares{
     display: none;
     flex-direction: column;
-    z-index: 4;
+    z-index: 2;
     position: absolute;
-    
     top: 2vh;
     right: 470px;
-    z-index: 3;
     font-size: 20px;
     padding: 2vh 2vw;
 }
@@ -88,37 +88,90 @@ main {
 /* --- MAIN --- */
 
 .main-segunda-div{
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     overflow: auto;
-    top: 170px;
+    height: 70vh;
+    top: 160px;
     right: 10px;
-    z-index: 4;
+    z-index: 3;
     background-color: #FFFFFF;
+    border: 1.5px solid black;
     border-radius: 20px;
     width: 25vw;
     max-height: 70vh;
     padding: 5vh;
+    gap: 10px;
     box-sizing: border-box; 
 }
 
+.main-segunda-div h1{
+    text-align: center;
+    font-size: 24px;
+}
+
 .informacoes-card{
-    height: 17.5vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 3vh;
+    border: 1.5px solid black;
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.informacoes-card_div{
+    display: flex;
+    flex-direction: row;
+    /* font-size: 20px; */
 }
 
 .informacoes-card_imagem{
-    height: 6vh;
+    height: 7vh;
     width: 3vw;
     border-radius: 60px;
 }
 
-.informacoes-card_titulo{
+.informacoes-card_div-titulo{
     font-size: 20px;
 }
 
-.informacoes-card_descricao{
+.informacoes-card_div-descricao{
     font-size: 14px;
+}
+
+/* --------- --------- */
+
+#main-segunda-div_button{
+    position: fixed;
+    background-image: url('../../assets/Botao-lista.png');
+    background-size: 60px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    height: 10vh;
+    width: 10vh;
+    background-position: center;
+    top: 450px;
+    left: 1170px;
+    z-index: 2;
+}
+
+#main-segunda-div_buttonIA{
+    position: fixed;
+    background-image: url('../../assets/Botao-IA.png');
+    background-size: 60px;
+    border: 2px solid black;
+    border-radius: 30px;
+    height: 10vh;
+    width: 10vh;
+    background-position: center;
+    top: 370px;
+    left: 1170px;
+    z-index: 2;
+}
+
+.main-terceira-div{
+    position: fixed;
+    z-index: 2;
 }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
+     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
      <link rel="icon" type="image/x-icon" href="../../assets/nimaps-1.ico">
 </head>
 <body>
@@ -37,7 +38,19 @@
         </form>
         <button id="botao-adicionar-local">Adicionar local</button>
         <div class="main-segunda-div">
+            <h1>Meus Marcadores</h1>
 
+        </div>
+        <div class="main-terceira-div">
+            <h1>Estudos de fixação(IA)</h1>
+            
+        </div>
+        <div>
+            <button id="main-segunda-div_button" onclick="mostrarLista()">
+            </button>
+
+            <button id="main-segunda-div_buttonIA" onclick="mostrarIA()">
+            </button>
         </div>
     </main>
     

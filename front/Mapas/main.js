@@ -1,6 +1,8 @@
 const map = L.map('map').setView([51.505, -0.09], 13);
 const button = document.getElementById('botao-adicionar-local');
 const formulario = document.getElementById('formularioLugares');
+const listaLugares = document.querySelector(".main-segunda-div");
+const chatIA = document.querySelector(".main-terceira-div");
 
 button.onclick = function(){
     if(formulario.style.display === 'none'){
@@ -31,7 +33,6 @@ formulario.onsubmit = async function(e){
 
 document.addEventListener("DOMContentLoaded", async () => {
     let id = sessionStorage.getItem('id');
-    // console.log(id);
 
     if (id) {
         const response = await fetch(`http://localhost:3000/api/listarLugaresMapa?id=${id}`, {
@@ -40,7 +41,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         let content = await response.json();
-        // console.log(content);
         criar(content);
         criarLista(content);
     } else {
@@ -50,9 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // LISTAR OS MARCADORES
 function criar(marcadores){
-    // console.log(marcadores.data)
     marcadores.data.forEach(marcador => {
-        // console.log(marcador)
         const marker = L.marker([parseFloat(marcador.latitude), parseFloat(marcador.longitude)]);
         marker.addTo(map);
         
@@ -60,8 +58,25 @@ function criar(marcadores){
     });
 }
 
+function mostrarLista(){
+    if(listaLugares.style.display === 'none'){
+        listaLugares.style.display = 'flex'
+    }
+    else{
+        listaLugares.style.display = 'none'
+    }
+}
+
+function mostrarIA(){
+    if(chatIA.style.display === 'none'){
+        chatIA.style.display = 'flex'
+    }
+    else{
+        chatIA.style.display = 'none'
+    }
+}
+
 function criarLista(informacoes){
-    const listaLugares = document.querySelector(".main-segunda-div");
     informacoes.data.forEach(informacao => {
 
         const card = document.createElement('section');
@@ -73,15 +88,19 @@ function criarLista(informacoes){
 
         const titulo = document.createElement('h2')
         titulo.textContent = informacao.titulo;
-        titulo.className = "informacoes-card_titulo"
+        titulo.className = "informacoes-card_div-titulo"
 
         const descricao = document.createElement('p')
         descricao.textContent = informacao.descricao;
-        descricao.className = "informacoes-card_descricao"
+        descricao.className = "informacoes-card_div-descricao"
 
+        const div = document.createElement('div');
+        titulo.className = "informacoes-card_div"
+
+        div.appendChild(titulo)
+        div.appendChild(descricao)
         card.appendChild(img)
-        card.appendChild(titulo)
-        card.appendChild(descricao)
+        card.appendChild(div)
         listaLugares.appendChild(card)
 
     });
@@ -96,7 +115,6 @@ function atualizarLocalizacao(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
 
-    // Linha única para definir um ícone com cor
     L.marker([lat, lon], { icon: L.divIcon({ className: 'custom-icon', html: '<div style="background-color: red; width: 12px; height: 12px; border-radius: 50%; border: 2px solid black;"></div>', iconSize: [12, 12] }) }).addTo(map)
         .bindPopup('Você está aqui!')
         .openPopup();
@@ -113,6 +131,4 @@ if (navigator.geolocation) {
 }
 layer.addTo(map);
 
-// Link do projeto: https://leafletjs.com/
-// https://leaflet-extras.github.io/leaflet-providers/preview/
 setTimeout(atualizarLocalizacao,1000)

@@ -6,10 +6,15 @@
     <title>Unimaps - home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="../../assets/nimaps-1.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Lemon:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>PÁGINA INICIAL</h1>
+        <div class="header-primeira-div">
+            <img src="../../assets/U.png" alt="">
+            <p id="header-paragrafo-unimaps">Unimaps</p>
+        </div>
+        <button id="deslogarse" onclick="">Sair</button>
     </header>
 
     <aside>
@@ -28,28 +33,23 @@
     <main>
         <p id="nome_usuario">Seja bem-vindo, Felipe!</p>
         <div class="primeira-div-home">
-            <section class="primeira-div-home_atalho">
-                <img id="atalho_perfil" src="../../assets/usuario__1_-removebg-preview 1.png" alt="">
-                <p id="primeira-div-home_atalho_paragrafo">Seu perfil</p>
+            <section class="primeira-div-home_atalhos" onclick="window.location.href=''">
+                <img src="../../assets/usuario__1_-removebg-preview 2.png" alt="imagem usuario">
+                <p>SEU PERFIL</p>
             </section>
-            <section class="primeira-div-home_atalho">
-                <img id="atalho_perfil" src="../../assets/foto-perfil.png" alt="">
-                <p id="primeira-div-home_atalho_paragrafo">a</p>
+            <section class="primeira-div-home_atalhos" onclick="window.location.href='../Botmap/index.html'">
+                <img src="../../assets/dica.png" alt="imagem dica">
+                <p>DICAS</p>
             </section>
-            <section class="primeira-div-home_atalho">
-                <img id="atalho_tarefas" src="../../assets/tarefas (2).png" alt="">
-                <p id="primeira-div-home_atalho_paragrafo">Tarefas</p>
+            <section class="primeira-div-home_atalhos" onclick="window.location.href='../'">
+                <img src="../../assets/tarefas (2).png" alt="imagem tarefas">
+                <p>TAREFAS</p>
             </section>
-            <section class="primeira-div-home_atalho">
-                <img id="atalho_info" src="../../assets/INFO.png" alt="">
-                <p id="primeira-div-home_atalho_paragrafo">Informações</p>
+            <section class="primeira-div-home_atalhos" onclick="window.location.href='../'">
+                <img src="../../assets/INFO.png" alt="imagem informacoes">
+                <p>INFORMAÇÕES</p>
             </section>
         </div>
-        <div class="segunda-div-home">
-            <section class="segunda-div-home_mapa">
-                <img src="../../assets/Atalho-mapa.png" alt="" srcset="">
-            </section>
-        </div>    
     </main>
 
     <script src="main.js"></script>

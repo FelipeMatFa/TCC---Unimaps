@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Lemon', sans-serif; 
 }
 
 body{
@@ -8,20 +9,43 @@ body{
     grid-template-areas: "aside header" 
                          "aside main";
     grid-template-columns: 1% 99%;
-    grid-template-rows: 0.5fr 2fr;
+    /* grid-template-rows: 0.4fr 2fr; */
 }
 
 header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     grid-area: header;
     background-color: #514EF7;
-    padding: 6vh;
+    padding: 3vh 3vw;
+    height: 10vh;
 }
 
-header h1{
-    font-size: 25px;
-    color: #FFFFFF;
-    line-height: 50px;
+.header-primeira-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 }
+
+.header-primeira-div img{
+    height: 7vh;
+}
+
+#header-paragrafo-unimaps{
+    color: white;
+}
+
+#deslogarse{
+    background-color:#a8a7ff;
+    border: 2px solid black;
+    width: 8vw;
+    height: 6vh;
+    font-size: 14px;
+}
+
 
 aside {
     display: flex;
@@ -67,15 +91,19 @@ aside:hover #Home, aside:hover #Mapa, aside:hover #Grupos, aside:hover #Dica, as
     display: flex;
 }
 
+/* ---------- MAIN ---------- */
+
 main {
     grid-area: main;
     display: grid;
-    grid-template-areas: "p nome"
-                         "div atalhos";
-    grid-template-rows: 10% 90%;
-    grid-template-columns: 50% 50%;
-    grid-template-columns: 2.5fr 1.5fr;
-
+    text-align: center;
+    gap: 10px;
+    grid-template-areas:
+        "p p"
+        "nome div"
+        "atalhos atalhos";
+    grid-template-rows: 0.3fr 1fr 1fr; 
+    grid-template-columns: 1fr; 
     padding: 10vh 15vh 10vh 15vh;
 }
 
@@ -86,57 +114,24 @@ main {
 }
 
 .primeira-div-home{
-    grid-area: div;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.primeira-div-home_atalho{
-    display: flex;
+    flex-direction: row;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 39vh;
-    margin: 2vh;
-    width: 20vw;
-    border-radius: 10px;
+    justify-content: space-around;
+    padding: 2vh 4vw;
+}
+
+.primeira-div-home_atalhos{
+    gap: 20px;
     background-color: #EEEEEE;
+    padding: 12vh;
+    border-radius: 20px;
 }
 
-/* ------- IMAGENS ATALHO ------- */
-#atalho_perfil{
-    height: 30vh;
-    width: 14vw;
+.primeira-div-home_atalhos img{
+    height: 18vh;
 }
 
-#atalho_tarefas{
-    height: 25vh;
-    width: 9vw;
-}
-
-#atalho_info{
-    height: 20vh;
-}
-
-
-#primeira-div-home_atalho_paragrafo{
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.segunda-div-home{
-    grid-area: atalhos;
-}
-
-.segunda-div-home_mapa{
-    display: flex;
-    justify-content: end;
-}
-
-.segunda-div-home_mapa img{
-    margin: 2vh;
-    height: 82vh;
-    width: 35vw;
+.primeira-div-home_atalhos:hover{
+    background-color: #c2c2c2;
 }
