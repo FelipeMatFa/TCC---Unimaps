@@ -67,8 +67,8 @@ main {
 
 #botao-adicionar-local{
     position: absolute;
-    top: 500px;
-    right: 470px;
+    top: 85vh;
+    right: 40vw;
     z-index: 2;
     font-size: 20px;
     padding: 2vh 2vw;
@@ -80,7 +80,7 @@ main {
     z-index: 2;
     position: absolute;
     top: 2vh;
-    right: 470px;
+    right: 40vw;
     font-size: 20px;
     padding: 2vh 2vw;
 }
@@ -145,29 +145,31 @@ main {
 #main-segunda-div_button{
     position: fixed;
     background-image: url('../../assets/Botao-lista.png');
-    background-size: 60px;
-    border: 2px solid black;
-    border-radius: 5px;
+    background-size: 10vh;
+    border: 1px solid black;
+    border-radius: 10px;
     background-repeat: no-repeat;
     height: 10vh;
     width: 10vh;
     background-position: center;
-    top: 450px;
-    left: 1170px;
+    top: 82vh;
+    left: 90vw;
     z-index: 2;
 }
 
 #main-segunda-div_buttonIA{
     position: fixed;
     background-image: url('../../assets/Botao-IA.png');
-    background-size: 60px;
+    background-color: none;
+    background-size: 10vh;
+    background-repeat: no-repeat;
     border: 2px solid black;
-    border-radius: 30px;
+    border-radius: 50px;
     height: 10vh;
     width: 10vh;
     background-position: center;
-    top: 370px;
-    left: 1170px;
+    top: 70vh;
+    left: 90vw;
     z-index: 2;
 }
 
