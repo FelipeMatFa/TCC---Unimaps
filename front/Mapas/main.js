@@ -4,14 +4,7 @@ const formulario = document.getElementById('formularioLugares');
 const listaLugares = document.querySelector(".main-segunda-div");
 const chatIA = document.querySelector(".main-terceira-div");
 
-button.onclick = function(){
-    if(formulario.style.display === 'none'){
-        formulario.style.display = 'flex'
-    }
-    else{
-        formulario.style.display = 'none'
-    }
-}
+
 
 formulario.onsubmit = async function(e){
     e.preventDefault();
@@ -56,24 +49,6 @@ function criar(marcadores){
         
         marker.bindPopup(marcador.titulo);
     });
-}
-
-function mostrarLista(){
-    if(listaLugares.style.display === 'none'){
-        listaLugares.style.display = 'flex'
-    }
-    else{
-        listaLugares.style.display = 'none'
-    }
-}
-
-function mostrarIA(){
-    if(chatIA.style.display === 'none'){
-        chatIA.style.display = 'flex'
-    }
-    else{
-        chatIA.style.display = 'none'
-    }
 }
 
 function criarLista(informacoes){

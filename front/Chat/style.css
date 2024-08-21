@@ -8,14 +8,13 @@ body{
     grid-template-areas: "aside header" 
                          "aside main";
     grid-template-columns: 1% 99%;
-    grid-template-rows: 0.5fr 2fr;
+    grid-template-rows: 0.1fr 2fr;
 }
 
 header{
     grid-area: header;
     background-color: #514EF7;
     padding: 4vh;
-    height: 6vh;
 }
 
 header h1{
@@ -91,9 +90,9 @@ main {
     background-color: #D9D9D9;
     border-radius: 10px;
     width: 30vw;
-    height: 7vh;
     padding: 1vh;
-    margin-top: 2vw;
+    margin-top: 4vh;
+    min-height: 7vh;
 }
 
 .div-elementos-conversa #mensagem_user{

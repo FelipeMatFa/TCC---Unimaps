@@ -67,8 +67,8 @@ main {
 
 #botao-adicionar-local{
     position: absolute;
-    top: 85vh;
-    right: 40vw;
+    top: 80vh;
+    right: 41vw;
     z-index: 2;
     font-size: 20px;
     padding: 2vh 2vw;
@@ -80,7 +80,7 @@ main {
     z-index: 2;
     position: absolute;
     top: 2vh;
-    right: 40vw;
+    right: 470px;
     font-size: 20px;
     padding: 2vh 2vw;
 }
@@ -93,8 +93,8 @@ main {
     position: absolute;
     overflow: auto;
     height: 70vh;
-    top: 160px;
-    right: 10px;
+    top: 27vh;
+    right: 1vw;
     z-index: 3;
     background-color: #FFFFFF;
     border: 1.5px solid black;
@@ -145,35 +145,32 @@ main {
 #main-segunda-div_button{
     position: fixed;
     background-image: url('../../assets/Botao-lista.png');
-    background-size: 10vh;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
     background-repeat: no-repeat;
     height: 10vh;
     width: 10vh;
     background-position: center;
-    top: 82vh;
-    left: 90vw;
+    top: 85vh;
+    left: 92vw;
     z-index: 2;
 }
 
 #main-segunda-div_buttonIA{
     position: fixed;
     background-image: url('../../assets/Botao-IA.png');
-    background-color: none;
-    background-size: 10vh;
-    background-repeat: no-repeat;
     border: 2px solid black;
     border-radius: 50px;
     height: 10vh;
     width: 10vh;
     background-position: center;
-    top: 70vh;
-    left: 90vw;
+    top: 73vh;
+    left: 92vw;
     z-index: 2;
 }
 
 .main-terceira-div{
     position: fixed;
     z-index: 2;
+    top: 20vh;
 }

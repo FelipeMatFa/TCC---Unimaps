@@ -1,8 +1,9 @@
 const chatBot = document.querySelector(".div-elementos-conversa");
 const button = document.querySelector("#enviar");
 const mensagem = document.getElementById("mensagem");
+const chat = document.getElementById("mensagem-chat");
 
-button.onclick = async function(e) {
+chat.onsubmit = async function(e) {
     e.preventDefault();
     let prompt = mensagem.value;
 
@@ -24,22 +25,25 @@ button.onclick = async function(e) {
 }
 
 function criarChat(msg) {
+    mensagem.value = "";
     return `
         <p id="mensagem_user">${msg}</p>
     `;
 }
 
 function criarResposta(retorno) {
-    console.log(retorno); // Para depuração
+    let prompt = retorno.replace(/\*\*/g, '<br><br>');
+    prompt = prompt.replace(/\*/g, '<br>');
     const respostaHTML = `
-        <p>${retorno}</p>
+        <p>${prompt}</p>
     `;
     texto(respostaHTML); // Passa a resposta para a função texto
 }
+
 
 function texto(respostaHTML) {
     chatBot.innerHTML += criarChat(mensagem.value); // Adiciona a mensagem do usuário
     setTimeout(function() {
         chatBot.innerHTML += respostaHTML; // Adiciona a resposta após um atraso
-    }, 1000); // Espera 2 segundos para adicionar a resposta
+    }, 1000);
 }
