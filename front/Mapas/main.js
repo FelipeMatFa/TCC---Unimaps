@@ -4,8 +4,6 @@ const formulario = document.getElementById('formularioLugares');
 const listaLugares = document.querySelector(".main-segunda-div");
 const chatIA = document.querySelector(".main-terceira-div");
 
-
-
 formulario.onsubmit = async function(e){
     e.preventDefault();
     let titulo     = document.getElementById("titulo").value;

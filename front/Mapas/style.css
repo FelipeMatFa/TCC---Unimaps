@@ -170,7 +170,33 @@ main {
 }
 
 .main-terceira-div{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    background-color: #FFFFFF;
     position: fixed;
+    height: 65vh;
+    width: 40vw;
+    padding: 5vh;
     z-index: 2;
+    border-radius: 20px;
+    border: 2px solid black;
     top: 20vh;
+    left: 30vw;
+}
+
+.main-terceira-div h1{
+    text-align: center;   
+}
+
+.main-terceira-div_pergunta{
+    display: flex;
+    justify-content: start;
+    height: 45vh;
+    padding: 2vh;
+}
+
+#user{
+    display: flex;
 }

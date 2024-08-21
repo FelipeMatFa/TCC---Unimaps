@@ -33,7 +33,7 @@ function criarChat(msg) {
 
 function criarResposta(retorno) {
     let prompt = retorno.replace(/\*\*/g, '<br><br>');
-    prompt = prompt.replace(/\*/g, '<br>');
+    prompt = prompt.replace(/\*/g, '<br>'); 
     const respostaHTML = `
         <p>${prompt}</p>
     `;
