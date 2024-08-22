@@ -102,7 +102,7 @@ main {
         "p p"
         "nome div"
         "atalhos atalhos";
-    grid-template-rows: 0.3fr 1fr 1fr; 
+    grid-template-rows: 0.4fr 1fr; 
     grid-template-columns: 1fr; 
     padding: 10vh 15vh 10vh 15vh;
 }
@@ -135,3 +135,174 @@ main {
 .primeira-div-home_atalhos:hover{
     background-color: #c2c2c2;
 }
+
+@media screen and (min-width: 375px) and (max-width: 800px) {
+    header{
+        padding: 2vh 8vw;
+        height: 12vh;
+    }
+
+    .header-primeira-div{
+        gap: 15px;
+    }
+
+    .header-primeira-div img{
+        height: 5vh;
+    }
+
+    #deslogarse{
+        width: 15vw;
+        height: 5vh;
+        font-size: 14px;
+    }
+
+    /* ---------- MAIN ---------- */
+
+    main {
+        gap: 5px;
+        padding: 10vh 1vh 1vh 5vh;
+        grid-template-rows: 0.2fr 1fr; 
+    }
+
+    #nome_usuario{
+        font-size: 18px;
+    }
+
+    .primeira-div-home{
+        display: grid;
+        grid-template-areas:
+            "el1 el2"
+            "el3 el4"
+        ;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        position: relative;
+    }
+
+    .primeira-div-home_atalhos{
+        gap: 20px;
+        padding: 4vh 2vw;
+        border-radius: 20px;
+    }
+
+    .primeira-div-home_atalhos img{
+        height: 8vh;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    header{
+        padding: 1vh 7vw;
+        height: 12vh;
+    }
+
+    .header-primeira-div{
+        gap: 17px;
+    }
+
+    #header-paragrafo-unimaps{
+        font-size: 20px;
+    }
+
+    .header-primeira-div img{
+        height: 6vh;
+    }
+
+    #deslogarse{
+        width: 13vw;
+        height: 5vh;
+        font-size: 16px;
+    }
+
+    /* ---------- MAIN ---------- */
+
+    main {
+        padding: 10vh 1vh 1vh 5vh;
+        grid-template-rows: 0.2fr 1fr; 
+    }
+
+    #nome_usuario{
+        font-size: 20px;
+    }
+
+    .primeira-div-home{
+        display: grid;
+        grid-template-areas:
+            "el1 el2"
+            "el3 el4"
+        ;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        position: relative;
+        font-size: 20px;
+    }
+
+    .primeira-div-home_atalhos{
+        gap: 20px;
+        padding: 6vh 10vw;
+        border-radius: 20px;
+    }
+
+    .primeira-div-home_atalhos img{
+        height: 14vh;
+    }
+}
+
+/* @media screen and (min-width: 1201px) and (max-width: 1700px) {
+    header{
+        padding: 1vh 6vw;
+        height: 14vh;
+    }
+
+    .header-primeira-div{
+        gap: 20px;
+    }
+
+    #header-paragrafo-unimaps{
+        font-size: 25px;
+    }
+
+    .header-primeira-div img{
+        height: 6vh;
+    }
+
+    #deslogarse{
+        width: 10vw;
+        height: 5vh;
+        font-size: 18px;
+    }
+
+
+    main {
+        padding: 10vh 1vh 1vh 5vh;
+        grid-template-rows: 0.15fr 1fr; 
+    }
+
+    #nome_usuario{
+        font-size: 25px;
+    }
+
+    .primeira-div-home{
+        display: grid;
+        grid-template-areas:
+            "el1 el2"
+            "el3 el4"
+        ;
+        grid-template-rows: 1fr 1fr; 
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        position: relative;
+        font-size: 25px;
+    }
+
+    .primeira-div-home_atalhos{
+        gap: 20px;
+        padding: 8vh 4vw;
+    }
+
+    .primeira-div-home_atalhos img{
+        height: 18vh;
+    }
+} */

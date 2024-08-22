@@ -1,3 +1,12 @@
+listaLugares.onclick = function(){
+    if(listaLugares.style.display === 'none'){
+        listaLugares.style.display = 'flex'
+    }
+    else{
+        listaLugares.style.display = 'none'
+    }
+}
+
 button.onclick = function(){
     if(formulario.style.display === 'none'){
         formulario.style.display = 'flex'
